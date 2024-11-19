@@ -1,6 +1,6 @@
 
 class extract_bin:
-    def __init__(self, file_path = "sentiment labelled sentences/amazon_cells_labelled.txt"):
+    def __init__(self, file_path = "amazon_cells_labelled.txt"):
 
         # Initialize lists for inputs and labels
         inputs = []
