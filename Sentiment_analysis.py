@@ -5,6 +5,17 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Embedding, LSTM, Dense
+import subprocess
+
+# Install TensorFlow dynamically if not already installed
+try:
+    import tensorflow as tf
+    st.write("TensorFlow imported successfully!")
+except ImportError:
+    st.warning("TensorFlow is not installed. Installing now...")
+    subprocess.run(["pip", "install", "tensorflow"])
+    st.success("TensorFlow installed! Please rerun the app.")
+    st.stop()
 
 # Load data
 from extract_bin import extract_bin, split
